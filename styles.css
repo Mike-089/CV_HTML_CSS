@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    color: #fff;
+   
+}
+
+p {
+    color: #ddd;
+}
+
+
+.cv-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cv-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+.cv-header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.cv-header p {
+    font-size: 1.2em;
+
+}
+
+
+.cv-content {
+    display: flex;
+    flex: 1;
+   
+}
+
+.cv-left-column {
+    flex: 1;
+    max-width: 33%;
+    background-color: #444;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cv-contact, .cv-idiomas {
+    padding: 15px;
+    background-color: #555;
+    border-radius: 8px;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.cv-right-column {
+    flex: 2;
+   
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #333;
+    align-items:stretch;
+    
+}
+
+.cv-right-column section {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.cv-right-column h2{
+    border-bottom: 2px solid #555;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+   
+}
+
+.bento-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+.bento-item:nth-child(odd) {
+    background-color: #555;
+    padding: 15px;
+    padding-top: 15px;
+    border-radius: 8px;
+}
+
+.bento-item:nth-child(even) {
+    background-color: #666;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .cv-content {
+        flex-direction: column;
+    }
+
+    .cv-left-column, .cv-right-column {
+        max-width: 100%;
+    }
+
+    .grid-container, .bento-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container, .bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
